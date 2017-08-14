@@ -1,17 +1,24 @@
 {
   "name": "package.json",
   "version": "1.0.0",
-  "description": "Blockchain Service",
-  "main": "index.js",
+  "description": "Blockchain service",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "request": "^2.81.0",
+    "web3": "^0.20.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.4.5"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "BlockchainServiceTest.js",
+    "start": "node server.js"
   },
   "author": "Nicolas Cherence",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^1.11.0"
-  },
-  "dependencies": {
-    "express": "^4.15.4"
-  }
+  "license": "ISC"
 }
