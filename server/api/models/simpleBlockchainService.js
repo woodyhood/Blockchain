@@ -26,14 +26,14 @@ module.exports = {
     Send a transaction from "fromAccount" to "targetAccount"
     Value is the amount of Ether transfered between the two accounts
   */
-  sendTransaction: function(fromAccount, targetAccount, value) {
-    return web3.eth.sendTransaction({from: fromAccount, to: targetAccount, value: web3.toWei(value, "ether")})
+  sendTransaction: function(fromAddress, targetAddress, value) {
+    return web3.eth.sendTransaction({from: fromAddress, to: targetAddress, value: web3.toWei(value, "ether")})
   },
 
   /*
-    Get the amount of Ether for ane account on the blockchain
+    Get the amount of Ether for one account on the blockchain
   */
   getBalance: function(address) {
-      return web3.eth.getBalance(address);
+      return web3.fromWei(web3.eth.getBalance(address));
   }
 };

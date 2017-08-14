@@ -1,16 +1,16 @@
 var app = require('./api/app');
-
-eth_node_url = 'http://localhost:8545'
+let config = require('./config/config');
 
 var http = require('http');
 var server = http.createServer(app);
 
-var port = process.env.PORT || 3001;
+var port = process.env.PORT || config.server.port;
 app.set('port', port);
 
 //Web3 connection object
 Web3 = require('web3');
 web3 = new Web3();
+eth_node_url = 'http://' + config.blockchain.host + ':' + config.blockchain.port
 web3.setProvider(new web3.providers.HttpProvider(eth_node_url));
 
 if(web3.isConnected()) {
