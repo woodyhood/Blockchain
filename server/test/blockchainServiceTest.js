@@ -3,9 +3,21 @@
 var expect  = require('chai').expect;
 var request = require('request');
 
-it('Main page content', function() {
+it('Accounts', function() {
     request('http://localhost:3001/accounts' , function(error, response, body) {
-        console.log(response);
-        expect(body).to.equal('Hello World');
+        expect(response.statusCode).to.equal(200);
+    });
+});
+
+it('Balance', function() {
+    request('http://localhost:8080/balance' , function(error, response, body) {
+        expect(response.statusCode).to.equal(200);
+    });
+});
+
+
+it('Blockchain transaction', function() {
+    request('http://localhost:8080/transaction' , function(error, response, body) {
+        expect(response.statusCode).to.equal(200);
     });
 });
