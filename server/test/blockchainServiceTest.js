@@ -10,14 +10,14 @@ it('Accounts', function() {
 });
 
 it('Balance', function() {
-    request('http://localhost:8080/balance' , function(error, response, body) {
+    request('http://localhost:3001/balance' , function(error, response, body) {
         expect(response.statusCode).to.equal(200);
     });
 });
 
 
 it('Blockchain transaction', function() {
-    request('http://localhost:8080/transaction' , function(error, response, body) {
+    request('http://localhost:3001/transaction' , function(error, response, body) {
         expect(response.statusCode).to.equal(200);
     });
 });
