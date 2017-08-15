@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 
 let config = require('../config/config');
 let transactionHash;
-// Those address has to change acording to the test blockchain
+// Those addresses has to change acording to the test blockchain
 let accountAddress = '0x9a07e3aa142ec43f9e0e83874eaa0c36661f200d'
 let receiverAddress = '0x7c5afef77b864c0a86e42a1df220c6ae43a4e5e1'
 
