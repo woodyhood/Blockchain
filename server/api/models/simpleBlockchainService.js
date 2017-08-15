@@ -8,7 +8,7 @@ module.exports = {
   },
 
   /*
-    List all the accounts on the blockchain
+    The result will be a list with all the accounts on the blockchain
   */
   getAccounts: function() {
     return web3.eth.accounts;
@@ -25,13 +25,15 @@ module.exports = {
   /*
     Send a transaction from "fromAccount" to "targetAccount"
     Value is the amount of Ether transfered between the two accounts
+    The result will be a decreave of Ether in the first account and an increase
+    in the second one
   */
   sendTransaction: function(fromAddress, targetAddress, value) {
     return web3.eth.sendTransaction({from: fromAddress, to: targetAddress, value: web3.toWei(value, "ether")})
   },
 
   /*
-    Get the amount of Ether for one account on the blockchain
+    The result will be the amount of Ether for one account on the blockchain
   */
   getBalance: function(address) {
       return web3.fromWei(web3.eth.getBalance(address));

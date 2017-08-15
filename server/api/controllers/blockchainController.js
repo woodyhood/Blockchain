@@ -15,7 +15,7 @@ exports.list_all_account = function(req, res) {
 
 /*
   Check the balance of an address
-  The sender has to add the parameter 'address'=AccountAddress to his query
+  The sender has to add the parameter 'address'= AccountAddress to his query
 */
 exports.check_Account = function(req, res) {
   if(!BlockchainService.isConnected()) {
@@ -27,7 +27,7 @@ exports.check_Account = function(req, res) {
 
 /*
   Get the information about a transaction
-  The sender has to add the parameter 'Id'=TransactionHash to his query
+  The sender has to add the parameter 'Id'= TransactionHash to his query
 */
 exports.list_transaction = function(req, res) {
   if(!BlockchainService.isConnected()) {
@@ -39,9 +39,9 @@ exports.list_transaction = function(req, res) {
 
 /*
   Send a transaction from one account to another one
-  The sender has to add the parameters 'from'=Address of the sender
-  'To'=Address of the receiver
-  'value'=Amount of Ether
+  The sender has to add the parameters 'from'= Address of the sender
+  'To'= Address of the receiver
+  'value'= Amount of Ether
 */
 exports.send_transaction = function(req, res) {
   if(!BlockchainService.isConnected()) {
