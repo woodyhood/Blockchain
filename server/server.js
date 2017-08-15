@@ -13,12 +13,14 @@ web3 = new Web3();
 eth_node_url = 'http://' + config.blockchain.host + ':' + config.blockchain.port
 web3.setProvider(new web3.providers.HttpProvider(eth_node_url));
 
+//Check the connection to web3
 if(web3.isConnected()) {
   console.log('Success: Web3 is connected');
 } else {
   console.log('Warning: Web3 is not connected');
 }
 
+//Get all the routes of the project
 var routes = require('./api/routes/blockchainRoutes');
 routes(app);
 
