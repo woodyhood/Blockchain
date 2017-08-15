@@ -15,4 +15,4 @@ Server:
 To run the server, you have to go to the server repository and run the command line: npm run start
 
 Test:
-Some test case has been done to test the Rest endpoints, when the server has been launched run the command line: npm test
+Some test case has been done to test the Rest endpoints, when the server has been launched, you can run the command line: npm test
